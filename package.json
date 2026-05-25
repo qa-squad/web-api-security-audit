@@ -1,0 +1,27 @@
+{
+  "name": "qasquad",
+  "version": "1.0.0",
+  "description": "This project is a lightweight QA and security-focused audit toolkit designed to simulate a real-world client engagement workflow.",
+  "main": "index.js",
+  "scripts": {
+    "audit": "ts-node src/scanner/basicAudit.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qa-squad/web-api-security-audit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/qa-squad/web-api-security-audit/issues"
+  },
+  "homepage": "https://github.com/qa-squad/web-api-security-audit#readme",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "playwright": "^1.60.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
