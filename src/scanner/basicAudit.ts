@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
 import fs from "fs";
+import { checkSecurityHeaders } from '../utils/securityHeaders';
 
 async function runAudit() {
     const browser = await chromium.launch({ headless: true });
@@ -18,6 +19,8 @@ async function runAudit() {
     const response = await page.goto(url);
 
     const title = await page.title();
+    const headers = response?.headers() || {};
+    const securityHeaders = checkSecurityHeaders(headers);
 
     await page.screenshot({
         path: 'screenshots/homepage.png',
@@ -28,7 +31,8 @@ async function runAudit() {
         url,
         title,
         status: response?.status(),
-        consoleErrors
+        consoleErrors,
+        securityHeaders,
     };
 
     fs.writeFileSync(
