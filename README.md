@@ -1,16 +1,17 @@
 # web-api-security-audit
 # Web & API Security + QA Audit Project
 
-##  Overview
-This project demonstrates end-to-end testing of a web application including:
+## Overview
 
-- Functional Testing
-- API Testing
-- Security Testing (OWASP Top 10)
+This project is a lightweight QA and security-focused audit toolkit designed to simulate a real-world client engagement workflow.
 
-The goal is to simulate a real-world client engagement where an application is tested for both quality and security risks before release.
+The goal is to combine:
+- QA automation
+- API validation
+- lightweight application security testing
+- structured reporting
 
----
+into a single professional audit process suitable for small to medium business websites and web applications.
 
 ##  Scope
 
@@ -20,12 +21,14 @@ The goal is to simulate a real-world client engagement where an application is t
 
 ---
 
-##  Tools Used
+## Tech Stack
 
-- Burp Suite
-- Nmap
-- Browser DevTools
+- Playwright
+- TypeScript
+- Node.js
 - Postman
+- Burp Suite
+- Browser DevTools
 
 ---
 
@@ -67,8 +70,28 @@ This project demonstrates the ability to identify:
 - Security vulnerabilities
 - API weaknesses
 
+- ---
+
+## Planned MVP
+
+The first working version of this toolkit will allow a user to:
+
+1. Enter a website URL
+2. Run automated QA and security checks
+3. Generate a lightweight audit report
+
+### Planned Checks
+- Console errors
+- Broken links
+- Security headers
+- Screenshot capture
+- Basic accessibility observations
+- Authentication flow observations
+
+---
+
 ---
 
 ## Contact
 
-Available for freelance QA & Security Testing projects.
+Available for freelance QA automation, API testing, and lightweight web application security audit projects.
