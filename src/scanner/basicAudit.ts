@@ -41,7 +41,19 @@ async function runAudit() {
     );
 
     console.log('Audit Complete');
-    console.log(report);
+    console.log('\n=== AUDIT REPORT ===');
+    console.log(`URL: ${url}`);
+    console.log(`Title: ${title}`);
+    console.log(`Status: ${response?.status()}`);
+    console.log(`Console Errors: ${consoleErrors.length}`);
+
+    console.log('\n=== SECURITY HEADERS ===');
+
+    securityHeaders.forEach(header => {
+        console.log(
+            `${header.name}: ${header.present ? 'Present' : 'Missing'}`
+        );
+    });
 
     await browser.close();
 }

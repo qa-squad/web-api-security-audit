@@ -1,6 +1,34 @@
 {
-  "url": "https://example.com",
-  "title": "Example Domain",
+  "url": "https://www.wikipedia.org",
+  "title": "Wikipedia",
   "status": 200,
-  "consoleErrors": []
+  "consoleErrors": [],
+  "securityHeaders": [
+    {
+      "name": "strict-transport-security",
+      "present": true,
+      "value": "max-age=106384710; includeSubDomains; preload",
+      "recommendation": "Add Strict-Transport-Security to enforce HTTPS usage."
+    },
+    {
+      "name": "content-security-policy",
+      "present": false,
+      "recommendation": "Add Content-Security-Policy to reduce XSS risk."
+    },
+    {
+      "name": "x-frame-options",
+      "present": false,
+      "recommendation": "Add X-Frame-Options to reduce clickjacking risk."
+    },
+    {
+      "name": "x-content-type-options",
+      "present": false,
+      "recommendation": "Add X-Content-Type-Options: nosniff."
+    },
+    {
+      "name": "referrer-policy",
+      "present": false,
+      "recommendation": "Add Referrer-Policy to control referrer information leakage."
+    }
+  ]
 }
