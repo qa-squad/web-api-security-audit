@@ -5,7 +5,7 @@ async function runAudit() {
     const browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
 
-    const url = 'https://example.com';
+    const url = process.argv[2] || 'https://example.com';
 
     const consoleErrors: string[] = [];
 
